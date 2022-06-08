@@ -29,6 +29,10 @@ public class ControlFlowExercises {
 //    }
 //        }
 //        int i = 2;
+//        do{
+//
+//        }
+//        int i = 2;
 //        do {
 //            System.out.println("This is inside the loop. Before i is incremented though. The value of i is " + i);
 //            // modify the loop control variable
@@ -61,10 +65,24 @@ public class ControlFlowExercises {
 //            System.out.println("oh hello " + i);
 //        }
 //        System.out.println("final product " + i);
-        int i;
-        for(i = 0; i <= 100; i++)
-            if(i % 3 == 0 && i % 5 == 0)
-                System.out.println(i);
+//        int i;
+//        for(i = 0; i <= 100; i++)
+//            if(i % 3 == 0 && i % 5 == 0)
+//                System.out.println(i);
+
+//        for (int i = 1; i <= 100; i++) {
+//            if (i % 3 == 0 && i % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else if (i % 3 == 0) {
+//                System.out.println("Fizz");
+//            } else if (i % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else {
+//                System.out.println(i);
+//            }
+//        }
+
+
     }
     }
 

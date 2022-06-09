@@ -81,6 +81,37 @@ public class ControlFlowExercises {
 //                System.out.println(i);
 //            }
 //        }
+        Scanner sc = new Scanner(System.in);
+
+        boolean anotherGrade = true;
+
+        do {
+            System.out.print("Please enter a numerical grade from 0 to 100 ");
+
+            int numericGrade = sc.nextInt();
+
+            if (numericGrade >= 88) {
+                System.out.println("A");
+            } else if (numericGrade >= 80) {
+                System.out.println("B");
+            } else if (numericGrade >= 67) {
+                System.out.println("C");
+            } else if (numericGrade >= 60) {
+                System.out.println("D");
+            } else {
+                System.out.println("F");
+            }
+
+            System.out.print("Do you wish to enter a new grade? (y/n) ");
+
+            String userResponse = sc.next();
+
+            if (!userResponse.equalsIgnoreCase("y")) {
+                anotherGrade = false;
+            }
+
+        } while (anotherGrade);
+
 
 
     }

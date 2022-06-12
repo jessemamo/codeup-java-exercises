@@ -15,7 +15,7 @@ public class Input {
     public Input() {
         this.scanner = new Scanner(System.in);
 
-
-
     }
+    public boolean yesNo() {}
+    System.out.println(yesNo());
 }

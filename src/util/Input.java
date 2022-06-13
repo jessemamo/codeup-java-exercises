@@ -29,4 +29,28 @@ public class Input {
         return userYesOrNo;
     }
 
+    public int getInt(int min, int max) {
+        System.out.println("Enter an integer between " + min + " and " + max);
+        int userInt = scanner.nextInt();
+        if (userInt < min || userInt > max) {
+            return getInt(min, max);
+        } else return userInt;
+    }
+    public int getInt() {
+        System.out.println("Enter an integer");
+        int userInt = scanner.nextInt();
+        return userInt;
+    }
+    public double getDouble(double min, double max) {
+        System.out.println("Enter a double between " + min + " and " + max);
+        double userDouble = scanner.nextDouble();
+        if (userDouble < min || userDouble > max) {
+            return getDouble(min, max);
+        } else return userDouble;
+    }
+    public double getDouble() {
+        System.out.println("Please enter a double");
+        double userDouble = scanner.nextDouble();
+        return userDouble;
+    }
 }

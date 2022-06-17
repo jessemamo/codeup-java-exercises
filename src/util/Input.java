@@ -11,7 +11,11 @@ public class Input {
         String userInput = scanner.nextLine();
         return userInput;
     }
-
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        String userInput = scanner.nextLine();
+        return userInput;
+    }
     public Input() {
         this.scanner = new Scanner(System.in);
 
@@ -30,16 +34,25 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        System.out.println("Enter an integer between " + min + " and " + max);
-        int userInt = scanner.nextInt();
-        if (userInt < min || userInt > max) {
-            return getInt(min, max);
-        } else return userInt;
+        String prompt = "Enter an integer between "
+                + min + " and " + max;
+        System.out.println(prompt);
+        int userInput = scanner.nextInt();
+        while (userInput < min || userInput > max) {
+            System.out.println(prompt);
+            userInput = scanner.nextInt();
+        }
+        return userInput;
     }
     public int getInt() {
         System.out.println("Enter an integer");
         int userInt = scanner.nextInt();
         return userInt;
+    }
+    public int getInt(String prompt){
+        System.out.println(prompt);
+        int userInput = scanner.nextInt();
+        return userInput;
     }
     public double getDouble(double min, double max) {
         System.out.println("Enter a double between " + min + " and " + max);
@@ -53,4 +66,9 @@ public class Input {
         double userDouble = scanner.nextDouble();
         return userDouble;
     }
+    public void getGhost(){
+        System.out.println("");
+        String ghostString = scanner.nextLine();
+    }
+
 }

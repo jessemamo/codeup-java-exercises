@@ -51,8 +51,13 @@ public class Input {
     }
     public int getInt(String prompt){
         System.out.println(prompt);
-        int userInput = scanner.nextInt();
-        return userInput;
+        try {
+            int userInput = Integer.valueOf(getString(prompt));
+            return userInput;
+        } catch (NumberFormatException nfe){
+            System.out.println("No integer detected in input, please try again");
+            return getInt(prompt);
+        }
     }
     public double getDouble(double min, double max) {
         System.out.println("Enter a double between " + min + " and " + max);
